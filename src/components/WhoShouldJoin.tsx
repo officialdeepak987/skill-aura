@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 import { GraduationCap, Stethoscope, CheckCircle2, Sparkles, Compass } from "lucide-react";
+import photo1 from "@/assets/training-photo-1.jpg";
+import photo2 from "@/assets/training-photo-2.jpg";
+import photo3 from "@/assets/training-photo-3.jpg";
 
 const studentPaths = ["Skin Therapist", "Laser Technician", "Dermatology Clinic Assistant", "Aesthetic Clinic Professional"];
 const internshipPaths = ["15-Day / 1-Month / 2-Month Plans", "Live Patient & Laser Training", "Zone-Based Hands-On Practice", "Certification + Placement Support"];
@@ -23,31 +26,48 @@ const WhoShouldJoin = () => (
         <div className="w-16 h-1 bg-accent mx-auto mt-4 rounded-full" />
       </motion.div>
 
-      <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
         {/* Students */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="glass-card border-black/5 rounded-[2.5rem] p-8 shadow-sm hover:border-black/10 transition-all duration-300 hover:scale-102 flex flex-col justify-between bg-white"
+          className="group glass-card glass-card-hover border-black/5 rounded-[2.5rem] overflow-hidden shadow-sm flex flex-col justify-between bg-white"
         >
           <div>
-            <div className="p-4 rounded-2xl bg-primary/10 border border-primary/20 w-fit mb-6">
-              <GraduationCap className="h-7 w-7 text-primary" />
+            {/* Visual Image Header */}
+            <div className="aspect-[16/10] overflow-hidden relative bg-muted border-b border-black/5">
+              <img
+                src={photo1}
+                alt="12th Pass Female Students Cosmetology Training"
+                loading="lazy"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent opacity-75 pointer-events-none" />
             </div>
-            <h3 className="text-xl font-bold mb-3 text-foreground tracking-tight">12th Pass Female Students</h3>
-            <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed mb-6">
-              Build a secure, high-paying career in the booming cosmetology industry with job-oriented, hands-on clinical training.
-            </p>
+
+            {/* Overlapping Icon Badge */}
+            <div className="mt-[-28px] ml-8 relative z-10 p-3.5 rounded-2xl bg-white shadow-md border border-black/5 w-fit text-primary flex items-center justify-center">
+              <GraduationCap className="h-6 w-6" />
+            </div>
+
+            <div className="px-8 pt-4 pb-6">
+              <h3 className="text-xl font-bold mb-3 text-foreground tracking-tight">12th Pass Female Students</h3>
+              <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
+                Build a secure, high-paying career in the booming cosmetology industry with job-oriented, hands-on clinical training.
+              </p>
+            </div>
           </div>
-          <ul className="space-y-3 pt-4 border-t border-black/5">
-            {studentPaths.map((p) => (
-              <li key={p} className="flex items-center gap-2.5 text-xs sm:text-sm text-foreground/80">
-                <CheckCircle2 className="h-4 w-4 text-accent shrink-0" />
-                {p}
-              </li>
-            ))}
-          </ul>
+          <div className="px-8 pb-8">
+            <ul className="space-y-3 pt-4 border-t border-black/5">
+              {studentPaths.map((p) => (
+                <li key={p} className="flex items-center gap-2.5 text-xs sm:text-sm text-foreground/80">
+                  <CheckCircle2 className="h-4 w-4 text-accent shrink-0" />
+                  {p}
+                </li>
+              ))}
+            </ul>
+          </div>
         </motion.div>
 
         {/* Center: Internship Program (Highlighted) */}
@@ -56,31 +76,47 @@ const WhoShouldJoin = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="relative glass-card border-primary/30 rounded-[2.5rem] p-8 shadow-[0_15px_45px_rgba(217,43,96,0.06)] scale-105 md:scale-105 z-20 flex flex-col justify-between bg-white"
+          className="group relative glass-card border-primary/30 rounded-[2.5rem] overflow-hidden shadow-[0_15px_45px_rgba(217,43,96,0.06)] lg:scale-105 z-20 flex flex-col justify-between bg-white"
         >
-          {/* Subtle highlight borders */}
-          <div className="absolute inset-0 border border-primary/30 rounded-[2.5rem] pointer-events-none" />
-          <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-primary text-[10px] font-bold uppercase tracking-widest text-white shadow-md">
+          {/* Highlight Badge on top border */}
+          <div className="absolute -top-0.5 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-b-xl bg-primary text-[9px] font-bold uppercase tracking-widest text-white shadow-sm z-30">
             Flagship Program
           </div>
           
           <div>
-            <div className="p-4 rounded-2xl bg-gradient-to-br from-primary/15 to-accent/10 border border-primary/20 w-fit mb-6 animate-float">
-              <Sparkles className="h-7 w-7 text-primary" />
+            {/* Visual Image Header */}
+            <div className="aspect-[16/10] overflow-hidden relative bg-muted border-b border-primary/10">
+              <img
+                src={photo2}
+                alt="Skin Therapist Internship Clinical Device Practice"
+                loading="lazy"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-80 pointer-events-none" />
             </div>
-            <h3 className="text-xl font-bold mb-3 text-foreground tracking-tight">Skin Therapist Internship</h3>
-            <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed mb-6">
-              Gain confidence under specialist guidance. Move beyond simple theory and work with real lasers, medi-facials, and clinical workflows.
-            </p>
+
+            {/* Overlapping Icon Badge */}
+            <div className="mt-[-28px] ml-8 relative z-10 p-3.5 rounded-2xl bg-gradient-to-br from-primary to-primary/90 shadow-md shadow-primary/20 text-white flex items-center justify-center w-fit animate-float">
+              <Sparkles className="h-6 w-6" />
+            </div>
+
+            <div className="px-8 pt-4 pb-6">
+              <h3 className="text-xl font-bold mb-3 text-foreground tracking-tight">Skin Therapist Internship</h3>
+              <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
+                Gain confidence under specialist guidance. Move beyond simple theory and work with real lasers, medi-facials, and clinical workflows.
+              </p>
+            </div>
           </div>
-          <ul className="space-y-3 pt-4 border-t border-black/5">
-            {internshipPaths.map((p) => (
-              <li key={p} className="flex items-center gap-2.5 text-xs sm:text-sm text-foreground">
-                <CheckCircle2 className="h-4 w-4 text-primary shrink-0 animate-pulse" />
-                <strong>{p}</strong>
-              </li>
-            ))}
-          </ul>
+          <div className="px-8 pb-8">
+            <ul className="space-y-3 pt-4 border-t border-black/5">
+              {internshipPaths.map((p) => (
+                <li key={p} className="flex items-center gap-2.5 text-xs sm:text-sm text-foreground">
+                  <CheckCircle2 className="h-4 w-4 text-primary shrink-0 animate-pulse" />
+                  <strong>{p}</strong>
+                </li>
+              ))}
+            </ul>
+          </div>
         </motion.div>
 
         {/* Doctors */}
@@ -89,25 +125,42 @@ const WhoShouldJoin = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="glass-card border-black/5 rounded-[2.5rem] p-8 shadow-sm hover:border-black/10 transition-all duration-300 hover:scale-102 flex flex-col justify-between bg-white"
+          className="group glass-card glass-card-hover border-black/5 rounded-[2.5rem] overflow-hidden shadow-sm flex flex-col justify-between bg-white"
         >
           <div>
-            <div className="p-4 rounded-2xl bg-primary/10 border border-primary/20 w-fit mb-6">
-              <Stethoscope className="h-7 w-7 text-primary" />
+            {/* Visual Image Header */}
+            <div className="aspect-[16/10] overflow-hidden relative bg-muted border-b border-black/5">
+              <img
+                src={photo3}
+                alt="Doctors and Medicos Dermatology Training"
+                loading="lazy"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent opacity-75 pointer-events-none" />
             </div>
-            <h3 className="text-xl font-bold mb-3 text-foreground tracking-tight">For Doctors & Medicos</h3>
-            <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed mb-6">
-              Unlock prestigious, independent opportunities in medical cosmetology, lasers, and clinic setups.
-            </p>
+
+            {/* Overlapping Icon Badge */}
+            <div className="mt-[-28px] ml-8 relative z-10 p-3.5 rounded-2xl bg-white shadow-md border border-black/5 w-fit text-primary flex items-center justify-center">
+              <Stethoscope className="h-6 w-6" />
+            </div>
+
+            <div className="px-8 pt-4 pb-6">
+              <h3 className="text-xl font-bold mb-3 text-foreground tracking-tight">For Doctors & Medicos</h3>
+              <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
+                Unlock prestigious, independent opportunities in medical cosmetology, lasers, and clinic setups.
+              </p>
+            </div>
           </div>
-          <ul className="space-y-3 pt-4 border-t border-black/5">
-            {doctorPaths.map((p) => (
-              <li key={p} className="flex items-center gap-2.5 text-xs sm:text-sm text-foreground/80">
-                <CheckCircle2 className="h-4 w-4 text-accent shrink-0" />
-                {p}
-              </li>
-            ))}
-          </ul>
+          <div className="px-8 pb-8">
+            <ul className="space-y-3 pt-4 border-t border-black/5">
+              {doctorPaths.map((p) => (
+                <li key={p} className="flex items-center gap-2.5 text-xs sm:text-sm text-foreground/80">
+                  <CheckCircle2 className="h-4 w-4 text-accent shrink-0" />
+                  {p}
+                </li>
+              ))}
+            </ul>
+          </div>
         </motion.div>
       </div>
     </div>

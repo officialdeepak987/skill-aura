@@ -4,15 +4,32 @@ import photo1 from "@/assets/training-photo-1.jpg";
 import photo2 from "@/assets/training-photo-2.jpg";
 import photo3 from "@/assets/training-photo-3.jpg";
 
-const studentPaths = ["Skin Therapist", "Laser Technician", "Dermatology Clinic Assistant", "Aesthetic Clinic Professional"];
-const internshipPaths = ["15-Day / 1-Month / 2-Month Plans", "Live Patient & Laser Training", "Zone-Based Hands-On Practice", "Certification + Placement Support"];
-const doctorPaths = ["MBBS Doctors", "BAMS / AYUSH Doctors", "Foreign Medical Graduates", "Aesthetic Dermatology Practice"];
+const studentPaths = [
+  "Comprehensive hands-on training (no science background needed)",
+  "Learn 20+ clinic cosmetic treatments including advanced medi-facials",
+  "Full support for job interviews and guaranteed placement assistance",
+  "Become a certified Skin Therapist, Laser Tech, or Clinic Assistant"
+];
+
+const internshipPaths = [
+  "Choose from 15-Day, 1-Month, or 2-Month clinical programs",
+  "100% practice on real clinical patient cases under dermatologist supervision",
+  "Master zone-based treatments: Face (acne/peels), Hair (PRP/growth), and Body (lasers)",
+  "Earn double certification from Skin Aura Clinic & the Skill Academy"
+];
+
+const doctorPaths = [
+  "Designed for MBBS, BAMS, BHMS, BDS & Foreign Medical Graduates",
+  "Learn how to diagnose skin conditions & plan aesthetic cosmetic protocols",
+  "Hands-on practice on live cosmetic lasers, peels & clinical cosmetology",
+  "Expert guidance on setting up an independent aesthetic practice from scratch"
+];
 
 const WhoShouldJoin = () => (
   <section className="py-16 md:py-24 bg-background relative overflow-hidden">
     <div className="absolute top-1/3 right-0 w-80 h-80 bg-accent/5 blur-[100px] pointer-events-none" />
 
-    <div className="container mx-auto px-6 relative z-10">
+    <div className="container mx-auto px-4 md:px-8 max-w-6xl relative z-10">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -61,9 +78,9 @@ const WhoShouldJoin = () => (
           <div className="px-8 pb-8">
             <ul className="space-y-3 pt-4 border-t border-black/5">
               {studentPaths.map((p) => (
-                <li key={p} className="flex items-center gap-2.5 text-xs sm:text-sm text-foreground/80">
-                  <CheckCircle2 className="h-4 w-4 text-accent shrink-0" />
-                  {p}
+                <li key={p} className="flex items-start gap-2.5 text-xs sm:text-sm text-foreground/80">
+                  <CheckCircle2 className="h-4 w-4 text-accent shrink-0 mt-0.5" />
+                  <span>{p}</span>
                 </li>
               ))}
             </ul>
@@ -110,8 +127,8 @@ const WhoShouldJoin = () => (
           <div className="px-8 pb-8">
             <ul className="space-y-3 pt-4 border-t border-black/5">
               {internshipPaths.map((p) => (
-                <li key={p} className="flex items-center gap-2.5 text-xs sm:text-sm text-foreground">
-                  <CheckCircle2 className="h-4 w-4 text-primary shrink-0 animate-pulse" />
+                <li key={p} className="flex items-start gap-2.5 text-xs sm:text-sm text-foreground">
+                  <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5 animate-pulse" />
                   <strong>{p}</strong>
                 </li>
               ))}
@@ -154,9 +171,9 @@ const WhoShouldJoin = () => (
           <div className="px-8 pb-8">
             <ul className="space-y-3 pt-4 border-t border-black/5">
               {doctorPaths.map((p) => (
-                <li key={p} className="flex items-center gap-2.5 text-xs sm:text-sm text-foreground/80">
-                  <CheckCircle2 className="h-4 w-4 text-accent shrink-0" />
-                  {p}
+                <li key={p} className="flex items-start gap-2.5 text-xs sm:text-sm text-foreground/80">
+                  <CheckCircle2 className="h-4 w-4 text-accent shrink-0 mt-0.5" />
+                  <span>{p}</span>
                 </li>
               ))}
             </ul>

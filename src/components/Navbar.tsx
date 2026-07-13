@@ -53,7 +53,7 @@ const Navbar = () => {
           : "bg-transparent py-5"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between px-6">
+      <div className="container mx-auto flex items-center justify-between px-4 md:px-8 max-w-6xl">
         <a href="#" className="flex items-center gap-2 group transition-transform duration-300 hover:scale-102">
           {/* Logo is kept normal (no invert) for light mode so it displays original colors */}
           <img src={logo} alt="Skin Aura Skill Academy" className="h-10 sm:h-12 w-auto object-contain" />
@@ -99,7 +99,7 @@ const Navbar = () => {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="md:hidden overflow-hidden bg-white/95 backdrop-blur-xl border-b border-black/5 shadow-xl"
           >
-            <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
+            <div className="container mx-auto px-4 md:px-8 max-w-6xl py-6 flex flex-col gap-4">
               {navLinks.map((l, index) => (
                 <motion.a
                   key={l.href}

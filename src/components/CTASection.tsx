@@ -8,8 +8,8 @@ const CTASection = () => (
     {/* Soft light glow */}
     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] rounded-full bg-primary/5 blur-[130px] opacity-70 pointer-events-none" />
 
-    <div className="container mx-auto px-6 relative z-10">
-      <div className="max-w-5xl mx-auto grid md:grid-cols-12 gap-12 items-center">
+    <div className="container mx-auto px-4 md:px-8 max-w-6xl relative z-10">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-12 gap-12 items-center">
         
         {/* Left Column: Text and CTAs */}
         <motion.div

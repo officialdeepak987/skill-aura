@@ -7,7 +7,7 @@ const InternshipFinalCTA = () => (
     {/* Soft light glow */}
     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] rounded-full bg-primary/5 blur-[130px] pointer-events-none" />
 
-    <div className="container mx-auto px-6 relative z-10">
+    <div className="container mx-auto px-4 md:px-8 max-w-6xl relative z-10">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

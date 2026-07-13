@@ -2,18 +2,30 @@ import { motion } from "framer-motion";
 import { Zap, Stethoscope, ShieldCheck, Building2, Landmark } from "lucide-react";
 
 const trustPoints = [
-  { icon: Zap, text: "Advanced machines – laser, hydrafacial & more" },
-  { icon: Stethoscope, text: "Real patient case exposure daily" },
-  { icon: ShieldCheck, text: "Dermatologist-led supervision throughout" },
-  { icon: Building2, text: "Premium clinic infrastructure & sterile environment" },
+  { 
+    icon: Zap, 
+    text: "Hands-on calibration of advanced machinery like Soprano Platinum, Q-Switch lasers, Viora contouring, and Vivace MNRF." 
+  },
+  { 
+    icon: Stethoscope, 
+    text: "Engage in real patient cases daily, shadowing live diagnosis, patient history taking, and setting customized treatments." 
+  },
+  { 
+    icon: ShieldCheck, 
+    text: "Get supervised 1-on-1 feedback from Dr. Jasdeep Kaur and guest instructors, verifying your clinical techniques." 
+  },
+  { 
+    icon: Building2, 
+    text: "Practice in a premium, sterile, state-of-the-art clinical facility located in Sector 43, DLF Phase IV, Gurugram." 
+  },
 ];
 
 const AuthorityTrust = () => (
   <section className="py-16 md:py-24 bg-background relative overflow-hidden" aria-label="Authority & Trust – Train in a Real Clinic">
     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] rounded-full bg-primary/5 blur-[120px] pointer-events-none" />
 
-    <div className="container mx-auto px-6 relative z-10">
-      <div className="max-w-4xl mx-auto text-center space-y-6">
+    <div className="container mx-auto px-4 md:px-8 max-w-6xl relative z-10">
+      <div className="max-w-6xl mx-auto text-center space-y-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -37,7 +49,7 @@ const AuthorityTrust = () => (
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto pt-10">
+        <div className="grid sm:grid-cols-2 gap-6 max-w-6xl mx-auto pt-10">
           {trustPoints.map((t, i) => (
             <motion.div
               key={i}

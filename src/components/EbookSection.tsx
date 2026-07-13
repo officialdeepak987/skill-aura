@@ -7,7 +7,7 @@ const EbookSection = () => (
   <section className="py-16 md:py-24 bg-background relative overflow-hidden">
     <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] rounded-full bg-primary/5 blur-[100px] pointer-events-none" />
 
-    <div className="container mx-auto px-6 relative z-10">
+    <div className="container mx-auto px-4 md:px-8 max-w-6xl relative z-10">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -25,7 +25,7 @@ const EbookSection = () => (
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="grid md:grid-cols-12 gap-10 items-center max-w-4xl mx-auto glass-card border-black/5 rounded-[3rem] p-8 md:p-12 shadow-md relative bg-white"
+        className="grid md:grid-cols-12 gap-10 items-center max-w-6xl mx-auto glass-card border-black/5 rounded-[3rem] p-8 md:p-12 shadow-md relative bg-white"
       >
         <div className="absolute top-0 right-0 w-24 h-24 bg-accent/5 rounded-bl-full pointer-events-none" />
         

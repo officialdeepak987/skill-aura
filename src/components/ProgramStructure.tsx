@@ -25,7 +25,40 @@ const zones = [
 
 const ProgramStructure = () => (
   <section className="py-16 md:py-24 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[hsl(40_20%_96%)] to-background border-t border-black/5 border-b border-black/5" aria-label="Program Structure – Clinical Internship Training">
-    <div className="container mx-auto px-6">
+    <div className="container mx-auto px-4 md:px-8 max-w-6xl relative z-10">
+      
+      {/* Flagship Program Intro card */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="max-w-6xl mx-auto glass-card border-black/5 rounded-[2.5rem] p-8 md:p-12 shadow-sm relative bg-white mb-16"
+      >
+        <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full pointer-events-none" />
+        
+        <span className="text-primary text-xs font-bold uppercase tracking-[0.2em] flex items-center gap-1.5 mb-2">
+          <Star className="h-4.5 w-4.5 text-primary fill-primary animate-pulse" /> Our Flagship Program
+        </span>
+        
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-foreground mt-3 mb-6 tracking-tight leading-snug">
+          Skin Therapist Internship Program – <br />
+          <span className="text-gradient-gold font-bold">Clinical & Zone-Based Training</span>
+        </h2>
+        
+        <div className="space-y-4 text-foreground/85 text-xs sm:text-sm sm:text-base leading-relaxed">
+          <p>
+            This advanced <strong>internship program at SkinAura Skill Academy</strong> is designed for aspiring skin therapists
+            who want <strong>real clinical experience in dermatology and cosmetology</strong>. Unlike theoretical courses, this program
+            focuses on <strong>hands-on training, live patient interaction</strong>, and practical exposure to advanced aesthetic procedures
+            including <strong>laser treatments, acne management, pigmentation correction</strong>, and <strong>medi-facials</strong>.
+          </p>
+          <p>
+            Students are trained under expert supervision in a <strong>real clinic setup</strong>, ensuring they become confident,
+            skilled, and job-ready professionals in the field of <strong>clinical cosmetology</strong>.
+          </p>
+        </div>
+      </motion.div>
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

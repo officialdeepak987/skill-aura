@@ -5,7 +5,7 @@ const Footer = () => (
   <footer id="contact" className="bg-[hsl(260_18%_6%)] text-white/80 py-16 border-t border-black/5 relative overflow-hidden">
     <div className="absolute bottom-0 right-0 w-80 h-80 bg-primary/5 blur-[120px] pointer-events-none" />
 
-    <div className="container mx-auto px-6 relative z-10">
+    <div className="container mx-auto px-4 md:px-8 max-w-6xl relative z-10">
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* Brand Column */}
         <div className="space-y-4">

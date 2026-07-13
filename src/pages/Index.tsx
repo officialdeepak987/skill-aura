@@ -5,7 +5,6 @@ import AboutSection from "@/components/AboutSection";
 import PlatformFeatures from "@/components/PlatformFeatures";
 import WhoShouldJoin from "@/components/WhoShouldJoin";
 import CoursesSection from "@/components/CoursesSection";
-import InstructorSection from "@/components/InstructorSection";
 import HandsOnTraining from "@/components/HandsOnTraining";
 import EbookSection from "@/components/EbookSection";
 import ClarityCallCTA from "@/components/ClarityCallCTA";
@@ -18,10 +17,8 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import FloatingCounsellingButtons from "@/components/FloatingCounsellingButtons";
 import InternshipHero from "@/components/InternshipHero";
 import EnrollmentForm from "@/components/EnrollmentForm";
-import FlagshipProgram from "@/components/FlagshipProgram";
 import ProgramStructure from "@/components/ProgramStructure";
 import InternshipPricing from "@/components/InternshipPricing";
-import TargetAudience from "@/components/TargetAudience";
 import AuthorityTrust from "@/components/AuthorityTrust";
 import InternshipFinalCTA from "@/components/InternshipFinalCTA";
 
@@ -37,14 +34,11 @@ const Index = () => (
 
     {/* Internship Program Sections */}
     <InternshipHero />
-    <FlagshipProgram />
     <ProgramStructure />
     <InternshipPricing />
-    <TargetAudience />
     <AuthorityTrust />
     <InternshipFinalCTA />
 
-    <InstructorSection />
     <HandsOnTraining />
     <EbookSection />
     <ClarityCallCTA />

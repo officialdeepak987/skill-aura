@@ -9,19 +9,67 @@ import level5 from "@/assets/course-level-5.png";
 import webinar from "@/assets/webinar.png";
 
 const courses = [
-  { img: level1, title: "Level 1 – Foundation", desc: "Foundation Skin & Clinic Assistant", instructor: "Dr Jasdeep Kaur", rating: 4.8 },
-  { img: level2, title: "Level 2 – Intermediate", desc: "Advanced Aesthetic Assistant", instructor: "Dr Jasdeep Kaur", rating: 4.9 },
-  { img: level3, title: "Level 3 – Silver Membership", desc: "Silver Membership for Doctors", instructor: "Dr Jasdeep Kaur", rating: 4.8 },
-  { img: level4, title: "Level 4 – Diamond Membership", desc: "Diamond Membership for Doctors", instructor: "Dr Jasdeep Kaur", rating: 4.9 },
-  { img: level5, title: "Level 5 – Quantum Membership", desc: "Quantum Membership for Clinic Founders", instructor: "Dr Jasdeep Kaur", rating: 5.0 },
-  { img: webinar, title: "Webinar", desc: "Live interactive webinar sessions on aesthetic dermatology", instructor: "Dr Jasdeep Kaur", rating: 4.7 },
+  { 
+    img: level1, 
+    title: "Level 1 – Foundation", 
+    desc: "Foundation Skin & Clinic Assistant", 
+    details: "Master skin anatomy, sterile protocols, client consultation, hygiene standards, and basic medi-facials.", 
+    duration: "1 Month", 
+    instructor: "Dr Jasdeep Kaur", 
+    rating: 4.8 
+  },
+  { 
+    img: level2, 
+    title: "Level 2 – Intermediate", 
+    desc: "Advanced Aesthetic Assistant", 
+    details: "Advance to chemical peeling, microdermabrasion, hydrafacial mechanics, and basic laser safety procedures.", 
+    duration: "2 Months", 
+    instructor: "Dr Jasdeep Kaur", 
+    rating: 4.9 
+  },
+  { 
+    img: level3, 
+    title: "Level 3 – Silver Membership", 
+    desc: "Silver Membership for Doctors", 
+    details: "Detailed aesthetic practice modules for medicos: lasers, PRP, chemical peeling, and skin condition treatment plans.", 
+    duration: "3 Months", 
+    instructor: "Dr Jasdeep Kaur", 
+    rating: 4.8 
+  },
+  { 
+    img: level4, 
+    title: "Level 4 – Diamond Membership", 
+    desc: "Diamond Membership for Doctors", 
+    details: "Premium aesthetic medicine training including microneedling radiofrequency (MNRF), fat freezing, and anti-aging care.", 
+    duration: "6 Months", 
+    instructor: "Dr Jasdeep Kaur", 
+    rating: 4.9 
+  },
+  { 
+    img: level5, 
+    title: "Level 5 – Quantum Membership", 
+    desc: "Quantum Membership for Clinic Founders", 
+    details: "Exclusive clinic management, marketing, equipment sourcing, neuro-aesthetic training, and business growth masterclass.", 
+    duration: "1 Year", 
+    instructor: "Dr Jasdeep Kaur", 
+    rating: 5.0 
+  },
+  { 
+    img: webinar, 
+    title: "Webinar", 
+    desc: "Live Interactive Webinar", 
+    details: "Live, intensive interactive online training focusing on acne, pigmentation, or laser science questions.", 
+    duration: "2 Hours", 
+    instructor: "Dr Jasdeep Kaur", 
+    rating: 4.7 
+  },
 ];
 
 const CoursesSection = () => (
   <section id="courses" className="py-16 md:py-24 bg-background relative overflow-hidden" aria-label="Courses">
     <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] rounded-full bg-primary/5 blur-[100px] pointer-events-none" />
 
-    <div className="container mx-auto px-6 relative z-10">
+    <div className="container mx-auto px-4 md:px-8 max-w-6xl relative z-10">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -61,11 +109,19 @@ const CoursesSection = () => (
 
               {/* Course Detail text */}
               <div className="p-6 space-y-3">
-                <h3 className="font-bold text-foreground group-hover:text-accent transition-colors duration-300 text-base sm:text-lg leading-snug tracking-tight">
-                  {c.title}
-                </h3>
-                <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
+                <div className="flex items-center justify-between">
+                  <h3 className="font-bold text-foreground group-hover:text-accent transition-colors duration-300 text-base sm:text-lg leading-snug tracking-tight">
+                    {c.title}
+                  </h3>
+                </div>
+                <div className="inline-block px-2.5 py-1 rounded-md bg-accent/10 border border-accent/20 text-accent text-[10px] font-bold uppercase tracking-wider">
+                  {c.duration}
+                </div>
+                <p className="text-foreground/90 font-medium text-xs">
                   {c.desc}
+                </p>
+                <p className="text-muted-foreground text-xs leading-relaxed">
+                  {c.details}
                 </p>
               </div>
             </div>

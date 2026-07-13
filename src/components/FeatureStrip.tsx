@@ -26,7 +26,7 @@ const features = [
 
 const FeatureStrip = () => (
   <section className="relative py-8 md:py-12 bg-background z-20">
-    <div className="container mx-auto px-6">
+    <div className="container mx-auto px-4 md:px-8 max-w-6xl">
       <div className="glass-card border-black/5 rounded-[2rem] p-8 md:p-10 shadow-[0_10px_30px_rgba(0,0,0,0.03)] bg-white">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((f, i) => (

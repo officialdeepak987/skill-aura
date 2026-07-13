@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { ChevronDown, ChevronUp, MapPin, Sparkles } from "lucide-react";
+import { ChevronDown, ChevronUp, MapPin, Sparkles, Youtube, Instagram, Facebook } from "lucide-react";
 import drJasdeep from "@/assets/dr-jasdeep.png";
 import drVikas from "@/assets/dr-vikas-kathuria.png";
 
@@ -17,6 +17,11 @@ const doctors = [
       "Dr Jasdeep Kaur is a trusted dermatologist and cosmetologist on a mission to train the next generation of aesthetic professionals. With over 15 years of clinical practice and having treated more than 13,000+ patients, she brings unmatched real-world expertise to every training session.",
     fullBio:
       "She runs an advanced laser aesthetic practice at DLF Phase IV, Gurugram and has personally mentored hundreds of skin therapists and doctors in aesthetic medicine. She is a Certified Cosmetologist with 15+ years of experience, Founder of Skin Aura Brain and Spine Neuro Centre, and the Author of Acne Decoded.",
+    socials: [
+      { icon: Youtube, href: "https://youtube.com/@skinauraclinic" },
+      { icon: Instagram, href: "https://instagram.com/sabclinicggn" },
+      { icon: Facebook, href: "https://facebook.com/SkinAuraBrainAndSpineNeuroCentre" },
+    ],
   },
   {
     name: "Dr Vikas Kathuria",
@@ -30,6 +35,7 @@ const doctors = [
       "Dr Vikas Kathuria is a distinguished neurosurgeon in India with over 22 years of experience, recognised as one of the top neurosurgeons in Gurgaon and the Delhi NCR region. He specialises in surgical treatment of the brain and spine and has treated 1.5 lakh+ patients.",
     fullBio:
       "Dr Vikas completed his MBBS and M.S. from PGI Rohtak, Haryana, followed by super-specialisation in Neurosurgery from Sheth V.S. General Hospital & Medical College, Ahmedabad. He also holds a Neuroendoscopy Fellowship from NSCB Govt. Medical College, Jabalpur.\n\nHis areas of expertise include brain tumour surgeries, brain haemorrhage treatment, Deep Brain Stimulation (DBS) for movement disorders, trauma surgeries for severe head injuries, and spine surgeries for lumbar and cervical disorders. He is a specialist in Spinal Cord Stimulation, Peripheral Nerve Surgery, Neuropathy & Neuropsychiatry.\n\nDr Vikas is a proud member of the Neurological Society of India (NSI), the Neuro Spinal Surgeons Association (NSSA), and the Indian Medical Association (IMA). His approachable demeanour and commitment to excellence have made him one of the most sought-after neurosurgeons in India.",
+    socials: [],
   },
 ];
 
@@ -102,7 +108,7 @@ const DoctorCard = ({ doctor }: { doctor: (typeof doctors)[0] }) => {
         </div>
       </div>
 
-      <div className="px-6 pb-6 md:px-8 md:pb-8 pt-0">
+      <div className="px-6 pb-6 md:px-8 md:pb-8 pt-0 flex items-center justify-between">
         <button
           onClick={() => setExpanded(!expanded)}
           className="inline-flex items-center gap-1.5 text-primary hover:bg-primary/5 px-4 py-2 rounded-full border border-primary/20 text-[10px] font-bold uppercase tracking-wider transition-all duration-300"
@@ -110,6 +116,25 @@ const DoctorCard = ({ doctor }: { doctor: (typeof doctors)[0] }) => {
           {expanded ? "Read Less" : "Read More"}
           {expanded ? <ChevronUp className="h-3.5 w-3.5" /> : <ChevronDown className="h-3.5 w-3.5" />}
         </button>
+
+        {doctor.socials && doctor.socials.length > 0 && (
+          <div className="flex gap-2">
+            {doctor.socials.map((s, si) => {
+              const Icon = s.icon;
+              return (
+                <a
+                  key={si}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-full bg-black/5 border border-black/5 text-foreground/60 hover:bg-primary/10 hover:border-primary/20 hover:text-primary transition-all duration-300"
+                >
+                  <Icon className="h-3.5 w-3.5" />
+                </a>
+              );
+            })}
+          </div>
+        )}
       </div>
     </motion.div>
   );
@@ -119,7 +144,7 @@ const AboutSection = () => (
   <section id="about" className="py-16 md:py-24 bg-background relative overflow-hidden">
     <div className="absolute top-1/2 left-0 -translate-y-1/2 w-80 h-80 bg-primary/5 blur-[100px] pointer-events-none" />
 
-    <div className="container mx-auto px-6 relative z-10">
+    <div className="container mx-auto px-4 md:px-8 max-w-6xl relative z-10">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

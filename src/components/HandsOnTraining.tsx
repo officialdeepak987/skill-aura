@@ -44,7 +44,7 @@ const HandsOnTraining = () => (
   <section id="training" className="py-16 md:py-24 bg-background relative overflow-hidden">
     <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] rounded-full bg-accent/5 blur-[120px] pointer-events-none" />
 
-    <div className="container mx-auto px-6 relative z-10">
+    <div className="container mx-auto px-4 md:px-8 max-w-6xl relative z-10">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -114,7 +114,7 @@ const HandsOnTraining = () => (
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="max-w-5xl mx-auto space-y-16"
+        className="max-w-6xl mx-auto space-y-16"
       >
         {galleryGroups.map((group) => (
           <div key={group.heading} className="space-y-6">

@@ -44,7 +44,7 @@ const ScrollRow = ({ items, icon: Icon, title }: { items: Testimonial[]; icon: t
   };
 
   return (
-    <div className="max-w-5xl mx-auto mb-12">
+    <div className="max-w-6xl mx-auto mb-12">
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
           <div className="p-2.5 rounded-xl bg-primary/10 border border-primary/20 text-primary shadow-sm">
@@ -74,7 +74,7 @@ const StudentSuccess = () => (
   <section className="py-16 md:py-24 bg-background relative overflow-hidden">
     <div className="absolute top-1/2 left-0 -translate-y-1/2 w-80 h-80 bg-primary/5 blur-[100px] pointer-events-none" />
 
-    <div className="container mx-auto px-6 relative z-10">
+    <div className="container mx-auto px-4 md:px-8 max-w-6xl relative z-10">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-6">
         <span className="text-primary text-xs font-bold uppercase tracking-[0.2em] flex items-center justify-center gap-1.5 animate-pulse">
           <Star className="h-4.5 w-4.5 text-primary fill-primary" /> Our Students' Reviews

@@ -7,8 +7,8 @@ const EnrollmentForm = () => {
     <section id="apply" className="py-16 sm:py-24 bg-background relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full bg-primary/5 blur-[100px] pointer-events-none" />
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-3xl mx-auto text-center space-y-6 glass-card border-black/5 rounded-[3rem] p-8 md:p-14 shadow-sm bg-white">
+      <div className="container mx-auto px-4 md:px-8 max-w-6xl relative z-10">
+        <div className="max-w-6xl mx-auto text-center space-y-6 glass-card border-black/5 rounded-[3rem] p-8 md:p-14 shadow-sm bg-white">
           <div className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-wider w-fit mx-auto animate-pulse">
             <Sparkles className="w-3.5 h-3.5" /> Admissions Open
           </div>

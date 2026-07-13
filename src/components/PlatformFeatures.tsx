@@ -16,7 +16,7 @@ const PlatformFeatures = () => (
   <section className="py-16 md:py-24 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-[hsl(40_20%_96%)] to-background relative overflow-hidden border-t border-black/5 border-b border-black/5">
     <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-96 h-96 bg-accent/5 blur-[120px] pointer-events-none" />
 
-    <div className="container mx-auto px-6">
+    <div className="container mx-auto px-4 md:px-8 max-w-6xl">
       <div className="grid md:grid-cols-12 gap-12 items-center max-w-6xl mx-auto">
         {/* Left: Beautiful Mock App Dashboard */}
         <motion.div

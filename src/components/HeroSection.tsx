@@ -50,7 +50,7 @@ const HeroSection = () => (
     <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] rounded-full bg-primary/5 blur-[100px] pointer-events-none" />
     <div className="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-[400px] h-[400px] rounded-full bg-accent/10 blur-[120px] opacity-40 pointer-events-none" />
 
-    <div className="container mx-auto px-6 grid md:grid-cols-12 gap-12 items-center relative z-10">
+    <div className="container mx-auto px-4 md:px-8 max-w-6xl grid md:grid-cols-12 gap-12 items-center relative z-10">
       {/* Premium Left Content Panel */}
       <div className="md:col-span-7 relative overflow-hidden flex flex-col justify-center py-6 md:py-0">
         <FloatingLogos />

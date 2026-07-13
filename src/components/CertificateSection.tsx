@@ -60,7 +60,7 @@ const CertificateSection = () => (
               {/* Top Logo Area */}
               <div className="z-10 mt-[2%] flex flex-col items-center">
                 <h4 className="text-[3.2vw] md:text-[14px] font-bold text-[#0A3622] tracking-[0.15em] font-sans">
-                  DERMA CURVE
+                  SKIN AURA
                 </h4>
                 <p className="text-[1.8vw] md:text-[7.5px] text-[#0A3622] font-semibold tracking-[0.25em] uppercase mt-0.5">
                   SKIN • HAIR • LASER • CLINIC
@@ -73,10 +73,10 @@ const CertificateSection = () => (
                   This is to certify that
                 </p>
                 <h3 className="text-[3.2vw] md:text-[13px] font-bold text-[#111] tracking-tight uppercase">
-                  DERMA CURVE
+                  SKIN AURA SKILL ACADEMY
                 </h3>
                 <p className="text-[1.8vw] md:text-[7.5px] text-muted-foreground leading-normal max-w-[85%] mx-auto font-medium">
-                  3rd floor, Shiva Enclave, Plot 1, chowk, Harsh Vihar, Pitampura, Delhi, 110034
+                  H.N. 7311, GF & Basement, behind Supermart 2, DLF Phase IV, Sector 43, Gurugram, Haryana 122009
                 </p>
                 
                 <div className="w-[75%] h-px bg-black/5 mx-auto my-1" />

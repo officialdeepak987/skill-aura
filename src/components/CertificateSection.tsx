@@ -1,89 +1,110 @@
 import { motion } from "framer-motion";
-import { Award, CheckCircle2, Star } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const CertificateSection = () => (
   <section className="py-16 md:py-24 bg-background relative overflow-hidden">
     <div className="absolute top-1/2 left-0 -translate-y-1/2 w-80 h-80 bg-primary/5 blur-[100px] pointer-events-none" />
 
     <div className="container mx-auto px-4 md:px-8 max-w-6xl relative z-10">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-12 gap-12 items-center">
-        {/* Certificate Mockup Visual */}
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          className="md:col-span-5 flex justify-center group"
-        >
-          <div className="relative w-64 aspect-[3/4] bg-white border-2 border-accent/40 rounded-[2rem] p-6 shadow-md relative flex flex-col justify-between items-center text-center group-hover:border-accent transition-colors duration-500">
-            {/* Subtle certificate patterns */}
-            <div className="absolute inset-2 border border-accent/10 rounded-[1.5rem] pointer-events-none" />
+      <div className="bg-gradient-to-r from-[#F5F0E9] to-[#FAF8F5] border border-black/5 rounded-[2.5rem] p-8 md:p-12 shadow-[0_10px_30px_rgba(0,0,0,0.02)]">
+        <div className="grid md:grid-cols-12 gap-10 md:gap-12 items-center">
+          
+          {/* Left Column: Text Copy */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="md:col-span-7 space-y-6"
+          >
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground leading-[1.2] tracking-tight">
+              Skin Aura Skill Academy — A Trusted Name in Aesthetic Education
+            </h2>
             
-            <div className="w-14 h-14 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center text-accent mt-4">
-              <Award className="h-7 w-7 text-accent animate-pulse" />
+            <p className="text-foreground/80 text-xs sm:text-sm leading-relaxed">
+              Skin Aura Skill Academy is proud to be recognized as one of India's most progressive and trusted institutions in beauty, wellness, and aesthetic medicine training. With a growing network of professionals and alumni, our academy stands for excellence, integrity, and career-driven education.
+            </p>
+            
+            <p className="text-foreground/80 text-xs sm:text-sm leading-relaxed">
+              What does this mean for you as a student? When you train at SASA, you're learning from a reputable brand that's shaping the future of the aesthetic industry. Our certified programs and hands-on teaching methods are designed to give you a strong edge in both national and international career opportunities. As we continue to expand our curriculum and upgrade our infrastructure, your journey with us becomes even more future-ready and globally aligned.
+            </p>
+          </motion.div>
+
+          {/* Right Column: D&B Certificate Mockup */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="md:col-span-5 flex justify-center w-full"
+          >
+            {/* Certificate visual mockup with vector green & gold curves */}
+            <div className="relative w-full max-w-[460px] aspect-[1.414/1] bg-white border border-black/10 rounded-2xl md:rounded-3xl shadow-lg overflow-hidden p-[4%] flex flex-col justify-between items-center text-center">
+              
+              {/* Top-Left Green/Gold Corner decoration */}
+              <div className="absolute top-0 left-0 w-[30%] h-[30%] overflow-hidden pointer-events-none">
+                <svg viewBox="0 0 100 100" className="w-full h-full" preserveAspectRatio="none">
+                  <path d="M 0 0 L 100 0 C 80 40, 40 80, 0 100 Z" fill="#0A3622" />
+                  <path d="M 0 100 C 40 80, 80 40, 100 0 L 105 0 C 85 45, 45 85, 0 105 Z" fill="#C08728" />
+                </svg>
+              </div>
+
+              {/* Bottom-Right Green/Gold Corner decoration */}
+              <div className="absolute bottom-0 right-0 w-[30%] h-[30%] overflow-hidden pointer-events-none">
+                <svg viewBox="0 0 100 100" className="w-full h-full rotate-180" preserveAspectRatio="none">
+                  <path d="M 0 0 L 100 0 C 80 40, 40 80, 0 100 Z" fill="#0A3622" />
+                  <path d="M 0 100 C 40 80, 80 40, 100 0 L 105 0 C 85 45, 45 85, 0 105 Z" fill="#C08728" />
+                </svg>
+              </div>
+
+              {/* Inner Frame Border */}
+              <div className="absolute inset-[3%] border border-[#0A3622]/10 rounded-xl pointer-events-none" />
+
+              {/* Top Logo Area */}
+              <div className="z-10 mt-[2%] flex flex-col items-center">
+                <h4 className="text-[3.2vw] md:text-[14px] font-bold text-[#0A3622] tracking-[0.15em] font-sans">
+                  DERMA CURVE
+                </h4>
+                <p className="text-[1.8vw] md:text-[7.5px] text-[#0A3622] font-semibold tracking-[0.25em] uppercase mt-0.5">
+                  SKIN • HAIR • LASER • CLINIC
+                </p>
+              </div>
+
+              {/* Certificate Content */}
+              <div className="z-10 w-full px-[5%] space-y-1 md:space-y-1.5 mt-[1%]">
+                <p className="text-[2vw] md:text-[8px] text-[#333] font-medium tracking-wide">
+                  This is to certify that
+                </p>
+                <h3 className="text-[3.2vw] md:text-[13px] font-bold text-[#111] tracking-tight uppercase">
+                  DERMA CURVE
+                </h3>
+                <p className="text-[1.8vw] md:text-[7.5px] text-muted-foreground leading-normal max-w-[85%] mx-auto font-medium">
+                  3rd floor, Shiva Enclave, Plot 1, chowk, Harsh Vihar, Pitampura, Delhi, 110034
+                </p>
+                
+                <div className="w-[75%] h-px bg-black/5 mx-auto my-1" />
+
+                <p className="text-[1.8vw] md:text-[7.5px] text-[#444] leading-normal font-medium max-w-[90%] mx-auto">
+                  is now part of the Dun & Bradstreet Global Database and has been assigned the
+                </p>
+                
+                <p className="text-[2.2vw] md:text-[9.5px] font-bold text-[#111] tracking-wider uppercase mt-1">
+                  D&B D-U-N-S® Number: 87-422-3559
+                </p>
+                
+                <p className="text-[1.8vw] md:text-[8px] font-bold text-[#444] mt-0.5">
+                  23rd April 2024
+                </p>
+              </div>
+
+              {/* Footer disclaimer */}
+              <div className="z-10 w-full px-[6%] mb-[2%]">
+                <p className="text-[1.2vw] md:text-[5px] text-muted-foreground leading-tight max-w-[95%] mx-auto">
+                  The fact that this business is registered in the D&B database should not be construed as suggesting that credit or any other financial or business transaction should be approved, denied, restricted or delayed. It only signifies that there is sufficient information in the database to assign a D&B D-U-N-S® Number. D&B D-U-N-S® Number is a registered number of Dun & Bradstreet Corporation, USA. This is a computer generated certificate and needs no signature.
+                </p>
+              </div>
+
             </div>
+          </motion.div>
 
-            <div className="space-y-3 z-10">
-              <span className="text-[10px] text-muted-foreground uppercase tracking-widest font-bold block">Skin Aura Skill Academy</span>
-              <div className="w-8 h-px bg-accent/20 mx-auto" />
-              <h4 className="text-lg font-bold text-foreground tracking-tight">CERTIFICATE</h4>
-              <p className="text-[9px] text-muted-foreground leading-relaxed uppercase tracking-wider">
-                This is to certify completion of advanced clinical dermatology training.
-              </p>
-            </div>
-
-            <div className="w-full border-t border-black/5 pt-4 mb-4 z-10">
-              <p className="text-[10px] text-primary font-bold tracking-wider uppercase">Dr Jasdeep Kaur</p>
-              <p className="text-[8px] text-muted-foreground tracking-widest mt-0.5 uppercase font-semibold">Lead Cosmetologist</p>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Text Copy Panel */}
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          className="md:col-span-7 space-y-6"
-        >
-          <div>
-            <span className="text-primary text-xs font-bold uppercase tracking-[0.2em] flex items-center gap-1.5 animate-pulse">
-              <Star className="h-4.5 w-4.5 text-primary fill-primary" /> Career Accreditation
-            </span>
-            <h2 className="text-3xl md:text-5xl font-bold text-foreground mt-3 tracking-tight">Earn a Certificate</h2>
-            <div className="w-12 h-1 bg-accent mt-3 rounded-full" />
-          </div>
-
-          <p className="text-gradient-gold text-sm sm:text-base font-semibold uppercase tracking-wider">
-            Get evidence of what you've learned
-          </p>
-
-          <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
-            Upon completing your course, receive a professional certificate from Skin Aura Skill Academy, 
-            validated by Dr Jasdeep Kaur. Showcase your expertise to leading clinics, hospitals, and cosmetology centers.
-          </p>
-
-          <div className="space-y-3.5 border-t border-black/5 pt-6">
-            <div className="flex items-center gap-3">
-              <CheckCircle2 className="h-4.5 w-4.5 text-accent shrink-0" />
-              <span className="text-foreground/90 text-xs sm:text-sm font-semibold tracking-wide">Industry-recognized certification</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <CheckCircle2 className="h-4.5 w-4.5 text-accent shrink-0" />
-              <span className="text-foreground/90 text-xs sm:text-sm font-semibold tracking-wide">Hands-on clinical training validation</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <CheckCircle2 className="h-4.5 w-4.5 text-accent shrink-0" />
-              <span className="text-foreground/90 text-xs sm:text-sm font-semibold tracking-wide">Job placement & career assistance</span>
-            </div>
-          </div>
-
-          <Button size="lg" className="text-xs sm:text-sm font-bold uppercase tracking-wider px-8 py-6 rounded-full bg-primary hover:bg-primary/95 text-primary-foreground shadow-md transition-transform duration-300 hover:scale-102" asChild>
-            <a href="https://learn.skinauraskillacademy.com" target="_blank" rel="noopener noreferrer">
-              Get Certified Now
-            </a>
-          </Button>
-        </motion.div>
+        </div>
       </div>
     </div>
   </section>

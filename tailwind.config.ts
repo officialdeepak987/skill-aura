@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      maxWidth: {
+        "6xl": "91rem",
+      },
       fontFamily: {
         sans: ["Fira Sans", "sans-serif"],
         serif: ["DM Serif Display", "serif"],

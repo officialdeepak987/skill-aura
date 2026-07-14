@@ -17,7 +17,7 @@ export default {
         "6xl": "91rem",
       },
       fontFamily: {
-        sans: ["Fira Sans", "sans-serif"],
+        sans: ["Plus Jakarta Sans", "Fira Sans", "sans-serif"],
         serif: ["DM Serif Display", "serif"],
       },
       colors: {
